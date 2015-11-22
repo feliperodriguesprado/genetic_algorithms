@@ -1,7 +1,6 @@
 package br.edu.univas.ga.framework;
 
 import java.io.File;
-import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
@@ -90,7 +89,7 @@ public class GAController {
 
         }
 
-        printResult(generationList);
+        saveResultToJSON(generationList);
 
     }
 
@@ -262,7 +261,7 @@ public class GAController {
         Collections.sort(population);
     }
 
-    private void printResult(HashMap<Integer, ArrayList<Individual>> generationList) {
+    private void saveResultToJSON(HashMap<Integer, ArrayList<Individual>> generationList) {
 
         File file;
         PrintWriter printWriter;
